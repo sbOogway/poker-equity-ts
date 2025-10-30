@@ -9,7 +9,7 @@ program
   .description("A powerful CLI tool to calculate poker equities in typescript")
   .version("1.0.0")
   .option('-h, --hands <hands>', 'Specify hands')
-  .option('-b, --board <board>', 'Specify board cards')
+  .option('-b, --board <board>', 'Specify board cards', "")
   .parse(process.argv);;
 // loadCommands(program);
 
@@ -22,5 +22,7 @@ const board = options.board;
 
 // console.log(hands)
 // console.log(board)
+
+
 
 console.log(handler(hands, board));

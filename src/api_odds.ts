@@ -1,13 +1,7 @@
-// import React from "react";
 import type { Card, Combo } from "./lib/models";
 import { calculateHandHandEquities } from "./lib/fast_hand_hand";
 
 const handler = (hands: String, board: String) => {
-  // const url = new URL(window.location.href);
-  // const params = url.searchParams;
-  // const hands = params.get("hands");
-  // const board = params.get("board");
-
   if (hands === undefined || hands === null) {
     return JSON.stringify({ error: "u need to put hands" });
   }
