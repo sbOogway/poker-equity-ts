@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from "commander";
-import texasHoldEmOdds from "./texasHoldEmOdds";
+import { texasHoldEmOdds } from "./texasHoldEmOdds";
 
 const program = new Command();
 

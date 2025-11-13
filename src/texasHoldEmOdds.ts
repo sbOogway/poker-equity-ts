@@ -1,7 +1,7 @@
 import type { Card, Combo } from "./lib/models";
 import { calculateHandHandEquities } from "./lib/fast_hand_hand";
 
-const texasHoldEmOdds = (hands: String, board: String) => {
+export function texasHoldEmOdds(hands: String, board: String) {
   if (hands === undefined || hands === null) {
     return JSON.stringify({ error: "u need to put hands" });
   }
@@ -56,4 +56,3 @@ const texasHoldEmOdds = (hands: String, board: String) => {
   return JSON.stringify(results, null, 2);
 };
 
-export default texasHoldEmOdds;
