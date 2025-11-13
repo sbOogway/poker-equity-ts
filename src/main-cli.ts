@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from "commander";
-import handler from './api_odds';
+import texasHoldEmOdds from "./texasHoldEmOdds";
 
 const program = new Command();
 
@@ -10,19 +10,12 @@ program
   .version("1.0.0")
   .option('-h, --hands <hands>', 'Specify hands')
   .option('-b, --board <board>', 'Specify board cards', "")
-  .parse(process.argv);;
-// loadCommands(program);
+  .parse(process.argv);
 
-// program.parse();
 const options = program.opts();
 
 
 const hands = options.hands;
 const board = options.board;
 
-// console.log(hands)
-// console.log(board)
-
-
-
-console.log(handler(hands, board));
+console.log(texasHoldEmOdds(hands, board));
