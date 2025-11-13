@@ -1,5 +1,7 @@
 # poker equity calculator in typescript
 
+https://www.npmjs.com/package/poker-equity
+
 not the fastest not the most accurate but does its job
 
 
