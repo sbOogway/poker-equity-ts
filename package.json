@@ -1,12 +1,13 @@
 {
-  "name": "poker-equity-ts",
+  "name": "poker-equity-texas-holdem",
   "version": "1.0.1",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-cli": "./node_modules/.bin/esbuild src/main-cli.ts --bundle --platform=node --minify --outfile=dist/cli.js",
-    "build-module": "./node_modules/.bin/esbuild src/texasHoldEmOdds.ts --bundle --platform=node --minify --outfile=dist/module.js"
+    "build-module": "./node_modules/.bin/esbuild src/texasHoldEmOdds.ts --bundle --platform=node --minify --outfile=src/index.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
