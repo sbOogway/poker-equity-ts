@@ -1,1 +1,974 @@
-"use strict";var C=Object.defineProperty;var W=Object.getOwnPropertyDescriptor;var z=Object.getOwnPropertyNames;var Y=Object.prototype.hasOwnProperty;var Z=(r,o)=>{for(var s in o)C(r,s,{get:o[s],enumerable:!0})},$=(r,o,s,t)=>{if(o&&typeof o=="object"||typeof o=="function")for(let n of z(o))!Y.call(r,n)&&n!==s&&C(r,n,{get:()=>o[n],enumerable:!(t=W(o,n))||t.enumerable});return r};var rr=r=>$(C({},"__esModule",{value:!0}),r);var Fr={};Z(Fr,{default:()=>vr});module.exports=rr(Fr);var R=["A","K","Q","J","T","9","8","7","6","5","4","3","2"],H=["s","h","c","d"];var g=[2,3,5,7,11,13,17,19,23,29,31,37,41],or=10,sr=166,tr=322,nr=1599,ir=1609,cr=2467,ur=3325,ar=6185,K=new Map,A=new Map;function fr(){let r=[7936,3968,1984,992,496,248,124,62,31,4111],o=[],s=hr(31);for(let n=0;n<1286;n++){let i=s.next().value,c=!0;for(let u of r)i^u||(c=!1);c&&o.push(i)}let t=1;for(let n of r){let i=M(n);K.set(i,t),t+=1}t=tr+1;for(let n=o.length-1;n>=0;n--){let i=M(o[n]);K.set(i,t),t+=1}er(r,o)}function er(r,o){let s=nr+1;for(let t of r){let n=M(t);A.set(n,s),s+=1}s=ar+1;for(let t=o.length-1;t>=0;t--){let n=M(o[t]);A.set(n,s),s+=1}}function lr(){let r=[12,11,10,9,8,7,6,5,4,3,2,1,0],o=or+1;for(let t of r){let n=[...r];y(n,t);for(let i of n){let c=g[t]**4*g[i];A.set(c,o),o+=1}}o=sr+1;for(let t of r){let n=[...r];y(n,t);for(let i of n){let c=g[t]**3*g[i]**2;A.set(c,o),o+=1}}o=ir+1;for(let t of r){let n=[...r];y(n,t);let i=P(n,2);for(let c of i){let u=c[0],f=c[1],a=g[t]**3*g[u]*g[f];A.set(a,o),o+=1}}o=cr+1;let s=P(r,2);for(let t of s){let n=t[0],i=t[1],c=[...r];y(c,n),y(c,i);for(let u of c){let f=g[n]**2*g[i]**2*g[u];A.set(f,o),o+=1}}o=ur+1;for(let t of r){let n=[...r];y(n,t);let i=P(n,3);for(let c of i){let u=c[0],f=c[1],a=c[2],e=g[t]**2*g[u]*g[f]*g[a];A.set(e,o),o+=1}}}function*hr(r){let o=(r|r-1)+1,s=o|(Math.floor((o&-o)/(r&-r))>>1)-1;for(yield s;;)o=(s|s-1)+1,s=o|(Math.floor((o&-o)/(s&-s))>>1)-1,yield s}function y(r,o){let s=r.indexOf(o);s>-1&&r.splice(s,1)}function P(r,o){if(o>r.length||o===0)return[];let s=[];for(let n=o-1;n>=0;n--)s.push(n);let t=[];for(;;){let n=[];for(let i of s)n.push(r[i]);t.push(n);for(let i=0;i<o;i++)if(s[i]+=1,s[i]<r.length-i){for(let c=i-1;c>=0;c--)s[c]=s[c+1]+1;break}if(s[0]>=r.length)break}return t}function M(r){let o=1;for(let s=0;s<=12;s++)r&1<<s&&(o*=g[s]);return o}fr();lr();var L=[2,3,5,7,11,13,17,19,23,29,31,37,41],dr={2:0,3:1,4:2,5:3,6:4,7:5,8:6,9:7,T:8,J:9,Q:10,K:11,A:12},pr={s:1,h:2,d:4,c:8},x=r=>{let o=r[0],s=r[1],t=dr[o],n=pr[s],i=L[t],c=1<<t<<16,u=n<<12,f=t<<8;return c|u|f|i};var _=(r,o)=>{if(o>r.length||o===0)return[];let s=[];for(let n=o-1;n>=0;n--)s.push(n);let t=[];for(;;){let n=[];for(let i=0;i<o;i++)n.push(r[s[i]]);t.push(n);for(let i=0;i<o;i++)if(s[i]+=1,s[i]<r.length-i){for(let c=i-1;c>=0;c--)s[c]=s[c+1]+1;break}if(s[0]>=r.length)break}return t},U=r=>[[r[0],r[1],r[2],r[3],r[4]],[r[0],r[1],r[2],r[3],r[5]],[r[0],r[1],r[2],r[3],r[6]],[r[0],r[1],r[2],r[4],r[5]],[r[0],r[1],r[2],r[4],r[6]],[r[0],r[1],r[2],r[5],r[6]],[r[0],r[1],r[3],r[4],r[5]],[r[0],r[1],r[3],r[4],r[6]],[r[0],r[1],r[3],r[5],r[6]],[r[0],r[1],r[4],r[5],r[6]],[r[0],r[2],r[3],r[4],r[5]],[r[0],r[2],r[3],r[4],r[6]],[r[0],r[2],r[3],r[5],r[6]],[r[0],r[2],r[4],r[5],r[6]],[r[0],r[3],r[4],r[5],r[6]],[r[1],r[2],r[3],r[4],r[5]],[r[1],r[2],r[3],r[4],r[6]],[r[1],r[2],r[3],r[5],r[6]],[r[1],r[2],r[4],r[5],r[6]],[r[1],r[3],r[4],r[5],r[6]],[r[2],r[3],r[4],r[5],r[6]]],I=r=>[[r[0],r[1],r[2],r[3],r[4]],[r[0],r[1],r[2],r[3],r[5]],[r[0],r[1],r[2],r[4],r[5]],[r[0],r[1],r[3],r[4],r[5]],[r[0],r[2],r[3],r[4],r[5]],[r[1],r[2],r[3],r[4],r[5]]],D=(r,o)=>{let s=o.concat(r),t=7462;if(s.length===7){let n=U(s);for(let i of n){let c=J(i);c<t&&(t=c)}return t}else if(s.length===6){let n=I(s);for(let i of n){let c=J(i);c<t&&(t=c)}return t}else if(s.length===5)return J(s);return t};var J=r=>{if(r[0]&r[1]&r[2]&r[3]&r[4]&61440){let o=(r[0]|r[1]|r[2]|r[3]|r[4])>>16,s=V(o);return K.get(s)||7462}else{let o=G(r);return A.get(o)||7462}},G=r=>r.reduce((o,s)=>o*(s&255),1),V=r=>{let o=1;for(let s=0;s<=12;s++)r&1<<s&&(o*=L[s]);return o},w=r=>{let o=Math.min(...r);return r.reduce((s,t,n)=>(t===o&&s.push(n),s),[])},X=(r,o)=>{let s=o.concat(r),t=7462;if(s.length===7){let n=U(s);for(let i=0;i<n.length;i++){let c=N(n[i]);c<t&&(t=c)}return t}else if(s.length===6){let n=I(s);for(let i=0;i<n.length;i++){let c=N(n[i]);c<t&&(t=c)}return t}else if(s.length===5)return J(s);throw"Unexpected number of cards"},T=(r,o)=>{let s=o.concat(r),t=7462;if(s.length===7){let n=U(s);for(let i=0;i<n.length;i++){let c=B(n[i]);c<t&&(t=c)}return t}else if(s.length===6){let n=I(s);for(let i=0;i<n.length;i++){let c=B(n[i]);c<t&&(t=c)}return t}else if(s.length===5)return J(s);throw"Unexpected number of cards"},N=r=>{let o=G(r);return A.get(o)},B=r=>{let o=(r[0]|r[1]|r[2]|r[3]|r[4])>>16,s=V(o);return K.get(s)};var b=[4096,8192,16384,32768],gr=[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1],[1,5,10,10,5,1]],O=(r,o)=>o>r?0:gr[r][o],br=r=>{let o=[],s=[];for(let t=0;t<R.length;t++){let n=[],i=[];for(let c=0;c<4;c++){let u=x(R[t]+H[c]);r.has(u)||(n.push(u),i.push(b[c]))}o.push(n),s.push(i)}return{cards:o,cardSuits:s}},Ar=r=>{let o=new Map;for(let s of r)o.set(s,(o.get(s)||0)+1);return o},Tr=(r,o)=>{let s=1;for(let[t,n]of r)s*=O(o.cards[t].length,n);return s},j=r=>{let o=0,s=-1;for(let[t,n]of r)n>o&&(o=n,s=t);return[s,o]},mr=r=>{let o=[];for(let[s,t]of r)t===2&&o.push(s);return o},yr=(r,o)=>r.size===3?Sr(r,o):r.size===4?Kr(r,o):r.size===5?Jr(r,o):[],Sr=(r,o)=>{let s=[],t=j(r),n;if(t[1]===2){let[i,c]=mr(r);n=(o.cards[i].length-1)*(o.cards[c].length-1)}else n=O(o.cards[t[0]].length-1,2);for(let i=0;i<b.length;i++){let c=b[i],u=[];for(let f of r.keys())if(o.cardSuits[f].includes(c))u.push(o.cards[f][0]&4294905855|c);else break;u.length===3&&s.push({board:u,numVariations:n,color:c,num:3})}return s},Kr=(r,o)=>{let s=[],t=j(r),n,i=Array.from(r.keys()),c=_(i,3);for(let u=0;u<c.length;u++){let f=c[u],a=i.filter(e=>!f.includes(e));for(let e=0;e<b.length;e++){let h=b[e],l=[];for(let d of f)if(o.cardSuits[d].includes(h))l.push(o.cards[d][0]&4294905855|h);else break;l.length===3&&(o.cardSuits[a[0]].includes(h)?a[0]===t[0]?n=O(o.cards[t[0]].length-1,2):n=(o.cards[t[0]].length-1)*(o.cards[a[0]].length-1):a[0]===t[0]?n=O(o.cards[t[0]].length,2):n=(o.cards[t[0]].length-1)*o.cards[a[0]].length,s.push({board:l,numVariations:n,color:h,num:3}))}}n=o.cards[t[0]].length-1;for(let u=0;u<b.length;u++){let f=b[u],a=[];for(let e of r.keys())if(o.cardSuits[e].includes(f))a.push(o.cards[e][0]&4294905855|f);else break;a.length===4&&s.push({board:a,numVariations:n,color:f,num:4})}return s},Jr=(r,o)=>{let s=[],t,n=Array.from(r.keys()),i=_(n,3);for(let c=0;c<i.length;c++){let u=i[c],f=n.filter(a=>!u.includes(a));for(let a=0;a<b.length;a++){let e=b[a],h=[];for(let l of u)if(o.cardSuits[l].includes(e))h.push(o.cards[l][0]&4294905855|e);else break;if(h.length===3){let l=o.cardSuits[f[0]].includes(e),d=o.cardSuits[f[1]].includes(e);l&&d?t=(o.cards[f[0]].length-1)*(o.cards[f[1]].length-1):l?t=(o.cards[f[0]].length-1)*o.cards[f[1]].length:d?t=o.cards[f[0]].length*(o.cards[f[1]].length-1):t=o.cards[f[0]].length*o.cards[f[1]].length,s.push({board:h,numVariations:t,color:e,num:3})}}}i=_(n,4);for(let c=0;c<i.length;c++){let u=i[c],f=n.filter(a=>!u.includes(a));for(let a=0;a<b.length;a++){let e=b[a],h=[];for(let l of u)if(o.cardSuits[l].includes(e))h.push(o.cards[l][0]&4294905855|e);else break;h.length===4&&(o.cardSuits[f[0]].includes(e)?t=o.cards[f[0]].length-1:t=o.cards[f[0]].length,s.push({board:h,numVariations:t,color:e,num:4}))}}for(let c=0;c<b.length;c++){let u=b[c],f=[];for(let a of r.keys())if(o.cardSuits[a].includes(u))f.push(o.cards[a][0]&4294905855|u);else break;f.length===5&&s.push({board:f,numVariations:1,color:u,num:5})}return s},S=(r,o)=>(r&61440)===o,xr=(r,o,s,t,n)=>{if(n===3)return S(r[0],t)&&S(r[1],t)?Math.min(s,T(r,o)):s;if(n===4){let i=S(r[0],t),c=S(r[1],t);return i&&c?Math.min(s,T(r,o)):i?Math.min(s,T([r[0]],o)):c?Math.min(s,T([r[1]],o)):s}else if(n===5){let i=S(r[0],t),c=S(r[1],t);return i&&c?Math.min(s,T(r,o)):i?Math.min(s,T([r[0]],o)):c?Math.min(s,T([r[1]],o)):Math.min(s,T([],o))}throw"Unexpected number of flushes"},_r=r=>{let o=new Array(r.length).fill(0),s=new Array(r.length).fill(0),t=0,n=new Set;for(let u of r)n.add(u[0]),n.add(u[1]);let i=br(n),c=[0,0,0,0,0];for(;;){let u=Ar(c),f=!0;for(let[a,e]of u)if(e>i.cards[a].length){f=!1;break}if(f){let a=Tr(u,i),e=[];for(let p=0;p<5;p++)e.push(i.cards[c[p]][0]);let h=[];for(let p=0;p<r.length;p++)h.push(X(r[p],e));let l=0,d=yr(u,i);for(let p=0;p<d.length;p++){let k=d[p],v=k.numVariations;if(v===0)continue;let E=[];for(let m=0;m<r.length;m++)E.push(xr(r[m],k.board,h[m],k.color,k.num));let F=w(E);if(F.length>1)for(let m=0;m<F.length;m++)s[F[m]]+=v;else o[F[0]]+=v;l+=v}let Q=w(h);if(Q.length>1)for(let p=0;p<Q.length;p++)s[Q[p]]+=a-l;else o[Q[0]]+=a-l;t+=a}for(let a=0;a<5;a++)if(c[a]+=1,c[a]<13){for(let e=a-1;e>=0;e--)c[e]=c[a];break}if(c[4]>12)break}return[o,s,t]},wr=[69634,73730,81922,98306,135427,139523,147715,164099,266757,270853,279045,295429,529159,533255,541447,557831,1053707,1057803,1065995,1082379,2102541,2106637,2114829,2131213,4199953,4204049,4212241,4228625,8394515,8398611,8406803,8423187,16783383,16787479,16795671,16812055,33560861,33564957,33573149,33589533,67115551,67119647,67127839,67144223,134224677,134228773,134236965,134253349,268442665,268446761,268454953,268471337],Qr=r=>{let o=[];for(let s of wr)r.includes(s)||o.push(s);return o},q=(r,o)=>{let s=[];for(let u of r)s.push([x(u[0]),x(u[1])]);let t=o.map(x);if(t.length<3)return _r(s);let n=0,i=new Array(s.length).fill(0),c=new Array(s.length).fill(0);if(t.length===5){let u=[];for(let a of s)u.push(D(t,a));let f=w(u);if(f.length>1)for(let a of f)c[a]+=1;else i[f[0]]+=1;n+=1}else{let u=Qr(t.concat(...s)),f=_(u,5-t.length);for(let a of f){let e=t.concat(a),h=[];for(let d=0;d<s.length;d++)h.push(D(e,s[d]));let l=w(h);if(l.length>1)for(let d of l)c[d]+=1;else i[l[0]]+=1;n+=1}}return[i,c,n]};var kr=(r,o)=>{if(r==null)return JSON.stringify({error:"u need to put hands"});if(o===void 0)return JSON.stringify({error:"parsing board"});if(r.length%4)return JSON.stringify({error:"check what u wrote in hands wrong length"});let s=o?.length?o.length:0;if(s%2||s>10)return JSON.stringify({error:"board wrong length"});for(var t=[],n=0;n<r.length/4;n++){var i=n*4,c=r.slice(i,i+2),u=r.slice(i+2,i+4);if(!c&&!u)return JSON.stringify({error:"error parsing hands"});t[n]=[c,u]}var f=[];if(s>0)var f=o?.match(/.{1,2}/g);let a=q(t,f),e=t.map((h,l)=>{var d=a[2];return{[h.join("")]:{win:a[0][l]/d,tie:a[1][l]/d}}});return JSON.stringify(e,null,2)},vr=kr;
+"use strict";
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// src/texasHoldEmOdds.ts
+var texasHoldEmOdds_exports = {};
+__export(texasHoldEmOdds_exports, {
+  default: () => texasHoldEmOdds_default
+});
+module.exports = __toCommonJS(texasHoldEmOdds_exports);
+
+// src/lib/constants.ts
+var RANKS = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
+var SUITS = ["s", "h", "c", "d"];
+
+// src/lib/lookup.ts
+var PRIMES = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41];
+var MAX_STRAIGHT_FLUSH = 10;
+var MAX_FOUR_OF_A_KIND = 166;
+var MAX_FULL_HOUSE = 322;
+var MAX_FLUSH = 1599;
+var MAX_STRAIGHT = 1609;
+var MAX_THREE_OF_A_KIND = 2467;
+var MAX_TWO_PAIR = 3325;
+var MAX_PAIR = 6185;
+var FLUSH_LOOKUP = /* @__PURE__ */ new Map();
+var UNSUITED_LOOKUP = /* @__PURE__ */ new Map();
+function flushes() {
+  const straightFlushes = [7936, 3968, 1984, 992, 496, 248, 124, 62, 31, 4111];
+  const flushes2 = [];
+  const gen = getLexicographicallyNextBitSequence(31);
+  for (let i = 0; i < 1286; i++) {
+    const f = gen.next().value;
+    let notSF = true;
+    for (const sf of straightFlushes) {
+      if (!(f ^ sf)) {
+        notSF = false;
+      }
+    }
+    if (notSF) {
+      flushes2.push(f);
+    }
+  }
+  let rank = 1;
+  for (const sf of straightFlushes) {
+    const primeProduct = primeProductFromRankbits(sf);
+    FLUSH_LOOKUP.set(primeProduct, rank);
+    rank += 1;
+  }
+  rank = MAX_FULL_HOUSE + 1;
+  for (let i = flushes2.length - 1; i >= 0; i--) {
+    const primeProduct = primeProductFromRankbits(flushes2[i]);
+    FLUSH_LOOKUP.set(primeProduct, rank);
+    rank += 1;
+  }
+  straightAndHighcards(straightFlushes, flushes2);
+}
+function straightAndHighcards(straights, highcards) {
+  let rank = MAX_FLUSH + 1;
+  for (const s of straights) {
+    const primeProduct = primeProductFromRankbits(s);
+    UNSUITED_LOOKUP.set(primeProduct, rank);
+    rank += 1;
+  }
+  rank = MAX_PAIR + 1;
+  for (let i = highcards.length - 1; i >= 0; i--) {
+    const primeProduct = primeProductFromRankbits(highcards[i]);
+    UNSUITED_LOOKUP.set(primeProduct, rank);
+    rank += 1;
+  }
+}
+function multiples() {
+  const backwardsRanks = [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+  let rank = MAX_STRAIGHT_FLUSH + 1;
+  for (const i of backwardsRanks) {
+    const kickers = [...backwardsRanks];
+    removeItem(kickers, i);
+    for (const k of kickers) {
+      const product = PRIMES[i] ** 4 * PRIMES[k];
+      UNSUITED_LOOKUP.set(product, rank);
+      rank += 1;
+    }
+  }
+  rank = MAX_FOUR_OF_A_KIND + 1;
+  for (const i of backwardsRanks) {
+    const pairranks = [...backwardsRanks];
+    removeItem(pairranks, i);
+    for (const pr of pairranks) {
+      const product = PRIMES[i] ** 3 * PRIMES[pr] ** 2;
+      UNSUITED_LOOKUP.set(product, rank);
+      rank += 1;
+    }
+  }
+  rank = MAX_STRAIGHT + 1;
+  for (const r of backwardsRanks) {
+    const kickers = [...backwardsRanks];
+    removeItem(kickers, r);
+    const gen = combinations(kickers, 2);
+    for (const kickers2 of gen) {
+      const c1 = kickers2[0];
+      const c2 = kickers2[1];
+      const product = PRIMES[r] ** 3 * PRIMES[c1] * PRIMES[c2];
+      UNSUITED_LOOKUP.set(product, rank);
+      rank += 1;
+    }
+  }
+  rank = MAX_THREE_OF_A_KIND + 1;
+  const tpgen = combinations(backwardsRanks, 2);
+  for (const tp of tpgen) {
+    const pair1 = tp[0];
+    const pair2 = tp[1];
+    const kickers = [...backwardsRanks];
+    removeItem(kickers, pair1);
+    removeItem(kickers, pair2);
+    for (const kicker of kickers) {
+      const product = PRIMES[pair1] ** 2 * PRIMES[pair2] ** 2 * PRIMES[kicker];
+      UNSUITED_LOOKUP.set(product, rank);
+      rank += 1;
+    }
+  }
+  rank = MAX_TWO_PAIR + 1;
+  for (const pairrank of backwardsRanks) {
+    const kickers = [...backwardsRanks];
+    removeItem(kickers, pairrank);
+    const kgen = combinations(kickers, 3);
+    for (const k of kgen) {
+      const k1 = k[0];
+      const k2 = k[1];
+      const k3 = k[2];
+      const product = PRIMES[pairrank] ** 2 * PRIMES[k1] * PRIMES[k2] * PRIMES[k3];
+      UNSUITED_LOOKUP.set(product, rank);
+      rank += 1;
+    }
+  }
+}
+function* getLexicographicallyNextBitSequence(bits) {
+  let t = (bits | bits - 1) + 1;
+  let next = t | (Math.floor((t & -t) / (bits & -bits)) >> 1) - 1;
+  yield next;
+  while (true) {
+    t = (next | next - 1) + 1;
+    next = t | (Math.floor((t & -t) / (next & -next)) >> 1) - 1;
+    yield next;
+  }
+}
+function removeItem(array, item) {
+  const index = array.indexOf(item);
+  if (index > -1) {
+    array.splice(index, 1);
+  }
+}
+function combinations(elements, k) {
+  if (k > elements.length || k === 0) {
+    return [];
+  }
+  const indices = [];
+  for (let i = k - 1; i >= 0; i--) {
+    indices.push(i);
+  }
+  const combs = [];
+  while (true) {
+    const comb = [];
+    for (const ind of indices) {
+      comb.push(elements[ind]);
+    }
+    combs.push(comb);
+    for (let i = 0; i < k; i++) {
+      indices[i] += 1;
+      if (indices[i] < elements.length - i) {
+        for (let j = i - 1; j >= 0; j--) {
+          indices[j] = indices[j + 1] + 1;
+        }
+        break;
+      }
+    }
+    if (indices[0] >= elements.length) {
+      break;
+    }
+  }
+  return combs;
+}
+function primeProductFromRankbits(rankbits) {
+  let product = 1;
+  for (let i = 0; i <= 12; i++) {
+    if (rankbits & 1 << i) {
+      product *= PRIMES[i];
+    }
+  }
+  return product;
+}
+flushes();
+multiples();
+
+// src/lib/evaluation_utils.ts
+var PRIMES2 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41];
+var CHAR_RANK_TO_INT_RANK = {
+  "2": 0,
+  "3": 1,
+  "4": 2,
+  "5": 3,
+  "6": 4,
+  "7": 5,
+  "8": 6,
+  "9": 7,
+  T: 8,
+  J: 9,
+  Q: 10,
+  K: 11,
+  A: 12
+};
+var CHAR_SUIT_TO_INT_SUIT = {
+  s: 1,
+  h: 2,
+  d: 4,
+  c: 8
+};
+var cardToInt = (card) => {
+  const rankChar = card[0];
+  const suitChar = card[1];
+  const rankInt = CHAR_RANK_TO_INT_RANK[rankChar];
+  const suitInt = CHAR_SUIT_TO_INT_SUIT[suitChar];
+  const rankPrime = PRIMES2[rankInt];
+  const bitRank = 1 << rankInt << 16;
+  const suit = suitInt << 12;
+  const rank = rankInt << 8;
+  return bitRank | suit | rank | rankPrime;
+};
+var combinations2 = (elements, k) => {
+  if (k > elements.length || k === 0) {
+    return [];
+  }
+  const indices = [];
+  for (let i = k - 1; i >= 0; i--) {
+    indices.push(i);
+  }
+  const combs = [];
+  while (true) {
+    const comb = [];
+    for (let i = 0; i < k; i++) {
+      comb.push(elements[indices[i]]);
+    }
+    combs.push(comb);
+    for (let i = 0; i < k; i++) {
+      indices[i] += 1;
+      if (indices[i] < elements.length - i) {
+        for (let j = i - 1; j >= 0; j--) {
+          indices[j] = indices[j + 1] + 1;
+        }
+        break;
+      }
+    }
+    if (indices[0] >= elements.length) {
+      break;
+    }
+  }
+  return combs;
+};
+var combinations75 = (elements) => {
+  return [
+    [elements[0], elements[1], elements[2], elements[3], elements[4]],
+    [elements[0], elements[1], elements[2], elements[3], elements[5]],
+    [elements[0], elements[1], elements[2], elements[3], elements[6]],
+    [elements[0], elements[1], elements[2], elements[4], elements[5]],
+    [elements[0], elements[1], elements[2], elements[4], elements[6]],
+    [elements[0], elements[1], elements[2], elements[5], elements[6]],
+    [elements[0], elements[1], elements[3], elements[4], elements[5]],
+    [elements[0], elements[1], elements[3], elements[4], elements[6]],
+    [elements[0], elements[1], elements[3], elements[5], elements[6]],
+    [elements[0], elements[1], elements[4], elements[5], elements[6]],
+    [elements[0], elements[2], elements[3], elements[4], elements[5]],
+    [elements[0], elements[2], elements[3], elements[4], elements[6]],
+    [elements[0], elements[2], elements[3], elements[5], elements[6]],
+    [elements[0], elements[2], elements[4], elements[5], elements[6]],
+    [elements[0], elements[3], elements[4], elements[5], elements[6]],
+    [elements[1], elements[2], elements[3], elements[4], elements[5]],
+    [elements[1], elements[2], elements[3], elements[4], elements[6]],
+    [elements[1], elements[2], elements[3], elements[5], elements[6]],
+    [elements[1], elements[2], elements[4], elements[5], elements[6]],
+    [elements[1], elements[3], elements[4], elements[5], elements[6]],
+    [elements[2], elements[3], elements[4], elements[5], elements[6]]
+  ];
+};
+var combinations65 = (elements) => {
+  return [
+    [elements[0], elements[1], elements[2], elements[3], elements[4]],
+    [elements[0], elements[1], elements[2], elements[3], elements[5]],
+    [elements[0], elements[1], elements[2], elements[4], elements[5]],
+    [elements[0], elements[1], elements[3], elements[4], elements[5]],
+    [elements[0], elements[2], elements[3], elements[4], elements[5]],
+    [elements[1], elements[2], elements[3], elements[4], elements[5]]
+  ];
+};
+var evaluate = (cards, board) => {
+  const allCards = board.concat(cards);
+  let minimum = 7462;
+  if (allCards.length === 7) {
+    const combs = combinations75(allCards);
+    for (const comb of combs) {
+      const score = five(comb);
+      if (score < minimum) {
+        minimum = score;
+      }
+    }
+    return minimum;
+  } else if (allCards.length === 6) {
+    const combs = combinations65(allCards);
+    for (const comb of combs) {
+      const score = five(comb);
+      if (score < minimum) {
+        minimum = score;
+      }
+    }
+    return minimum;
+  } else if (allCards.length === 5) {
+    return five(allCards);
+  }
+  return minimum;
+};
+var five = (cards) => {
+  if (cards[0] & cards[1] & cards[2] & cards[3] & cards[4] & 61440) {
+    const handOR = (cards[0] | cards[1] | cards[2] | cards[3] | cards[4]) >> 16;
+    const prime = primeProductFromRankbits2(handOR);
+    return FLUSH_LOOKUP.get(prime) || 7462;
+  } else {
+    const prime = primeProductFromHand(cards);
+    return UNSUITED_LOOKUP.get(prime) || 7462;
+  }
+};
+var primeProductFromHand = (cardInts) => {
+  return cardInts.reduce((product, cardInt) => product * (cardInt & 255), 1);
+};
+var primeProductFromRankbits2 = (rankbits) => {
+  let product = 1;
+  for (let i = 0; i <= 12; i++) {
+    if (rankbits & 1 << i) {
+      product *= PRIMES2[i];
+    }
+  }
+  return product;
+};
+var findWinners = (results) => {
+  const min = Math.min(...results);
+  return results.reduce((winners, result, index) => {
+    if (result === min) {
+      winners.push(index);
+    }
+    return winners;
+  }, []);
+};
+var evaluateRainbow = (cards, board) => {
+  const allCards = board.concat(cards);
+  let minimum = 7462;
+  if (allCards.length === 7) {
+    const combs = combinations75(allCards);
+    for (let i = 0; i < combs.length; i++) {
+      const score = fiveRainbow(combs[i]);
+      if (score < minimum) {
+        minimum = score;
+      }
+    }
+    return minimum;
+  } else if (allCards.length === 6) {
+    const combs = combinations65(allCards);
+    for (let i = 0; i < combs.length; i++) {
+      const score = fiveRainbow(combs[i]);
+      if (score < minimum) {
+        minimum = score;
+      }
+    }
+    return minimum;
+  } else if (allCards.length === 5) {
+    return five(allCards);
+  }
+  throw "Unexpected number of cards";
+};
+var evaluateFlush = (cards, board) => {
+  const allCards = board.concat(cards);
+  let minimum = 7462;
+  if (allCards.length === 7) {
+    const combs = combinations75(allCards);
+    for (let i = 0; i < combs.length; i++) {
+      const score = fiveFlush(combs[i]);
+      if (score < minimum) {
+        minimum = score;
+      }
+    }
+    return minimum;
+  } else if (allCards.length === 6) {
+    const combs = combinations65(allCards);
+    for (let i = 0; i < combs.length; i++) {
+      const score = fiveFlush(combs[i]);
+      if (score < minimum) {
+        minimum = score;
+      }
+    }
+    return minimum;
+  } else if (allCards.length === 5) {
+    return five(allCards);
+  }
+  throw "Unexpected number of cards";
+};
+var fiveRainbow = (cards) => {
+  const prime = primeProductFromHand(cards);
+  return UNSUITED_LOOKUP.get(prime);
+};
+var fiveFlush = (cards) => {
+  const handOR = (cards[0] | cards[1] | cards[2] | cards[3] | cards[4]) >> 16;
+  const prime = primeProductFromRankbits2(handOR);
+  return FLUSH_LOOKUP.get(prime);
+};
+
+// src/lib/fast_hand_hand.ts
+var SUIT_MASKS = [4096, 8192, 16384, 32768];
+var pascalsTriangle = [
+  [1],
+  [1, 1],
+  [1, 2, 1],
+  [1, 3, 3, 1],
+  [1, 4, 6, 4, 1],
+  [1, 5, 10, 10, 5, 1]
+];
+var binomial = (n, k) => {
+  if (k > n) {
+    return 0;
+  }
+  return pascalsTriangle[n][k];
+};
+var getBinedDeck = (exclusions) => {
+  const cards = [];
+  const cardSuits = [];
+  for (let i = 0; i < RANKS.length; i++) {
+    const row = [];
+    const rowSuits = [];
+    for (let j = 0; j < 4; j++) {
+      const card = cardToInt(RANKS[i] + SUITS[j]);
+      if (!exclusions.has(card)) {
+        row.push(card);
+        rowSuits.push(SUIT_MASKS[j]);
+      }
+    }
+    cards.push(row);
+    cardSuits.push(rowSuits);
+  }
+  return { cards, cardSuits };
+};
+var countCards = (indices) => {
+  const count = /* @__PURE__ */ new Map();
+  for (const ind of indices) {
+    count.set(ind, (count.get(ind) || 0) + 1);
+  }
+  return count;
+};
+var calcNumColorings = (cardCount, deck) => {
+  let num = 1;
+  for (const [k, v] of cardCount) {
+    num *= binomial(deck.cards[k].length, v);
+  }
+  return num;
+};
+var mostCommon = (map) => {
+  let most = 0;
+  let mostKey = -1;
+  for (const [k, v] of map) {
+    if (v > most) {
+      most = v;
+      mostKey = k;
+    }
+  }
+  return [mostKey, most];
+};
+var findCount2 = (map) => {
+  const out = [];
+  for (const [k, v] of map) {
+    if (v === 2) {
+      out.push(k);
+    }
+  }
+  return out;
+};
+var flushColorings = (cardCount, deck) => {
+  if (cardCount.size === 3) {
+    return flushColorings3(cardCount, deck);
+  } else if (cardCount.size === 4) {
+    return flushColorings4(cardCount, deck);
+  } else if (cardCount.size === 5) {
+    return flushColorings5(cardCount, deck);
+  }
+  return [];
+};
+var flushColorings3 = (cardCount, deck) => {
+  const colorings = [];
+  const a = mostCommon(cardCount);
+  let numVariations;
+  if (a[1] === 2) {
+    const [k1, k2] = findCount2(cardCount);
+    numVariations = (deck.cards[k1].length - 1) * (deck.cards[k2].length - 1);
+  } else {
+    numVariations = binomial(deck.cards[a[0]].length - 1, 2);
+  }
+  for (let i = 0; i < SUIT_MASKS.length; i++) {
+    const mask = SUIT_MASKS[i];
+    const board = [];
+    for (const k of cardCount.keys()) {
+      if (deck.cardSuits[k].includes(mask)) {
+        board.push(deck.cards[k][0] & 4294905855 | mask);
+      } else {
+        break;
+      }
+    }
+    if (board.length === 3) {
+      colorings.push({
+        board,
+        numVariations,
+        color: mask,
+        num: 3
+      });
+    }
+  }
+  return colorings;
+};
+var flushColorings4 = (cardCount, deck) => {
+  const colorings = [];
+  const a = mostCommon(cardCount);
+  let numVariations;
+  const cardCountKeys = Array.from(cardCount.keys());
+  const combs = combinations2(cardCountKeys, 3);
+  for (let i = 0; i < combs.length; i++) {
+    const cards = combs[i];
+    const excluded = cardCountKeys.filter((x) => {
+      return !cards.includes(x);
+    });
+    for (let i2 = 0; i2 < SUIT_MASKS.length; i2++) {
+      const mask = SUIT_MASKS[i2];
+      const board = [];
+      for (const k of cards) {
+        if (deck.cardSuits[k].includes(mask)) {
+          board.push(deck.cards[k][0] & 4294905855 | mask);
+        } else {
+          break;
+        }
+      }
+      if (board.length === 3) {
+        const excludedPossible = deck.cardSuits[excluded[0]].includes(mask);
+        if (excludedPossible) {
+          if (excluded[0] === a[0]) {
+            numVariations = binomial(deck.cards[a[0]].length - 1, 2);
+          } else {
+            numVariations = (deck.cards[a[0]].length - 1) * (deck.cards[excluded[0]].length - 1);
+          }
+        } else {
+          if (excluded[0] === a[0]) {
+            numVariations = binomial(deck.cards[a[0]].length, 2);
+          } else {
+            numVariations = (deck.cards[a[0]].length - 1) * deck.cards[excluded[0]].length;
+          }
+        }
+        colorings.push({
+          board,
+          numVariations,
+          color: mask,
+          num: 3
+        });
+      }
+    }
+  }
+  numVariations = deck.cards[a[0]].length - 1;
+  for (let i = 0; i < SUIT_MASKS.length; i++) {
+    const mask = SUIT_MASKS[i];
+    const board = [];
+    for (const k of cardCount.keys()) {
+      if (deck.cardSuits[k].includes(mask)) {
+        board.push(deck.cards[k][0] & 4294905855 | mask);
+      } else {
+        break;
+      }
+    }
+    if (board.length === 4) {
+      colorings.push({
+        board,
+        numVariations,
+        color: mask,
+        num: 4
+      });
+    }
+  }
+  return colorings;
+};
+var flushColorings5 = (cardCount, deck) => {
+  const colorings = [];
+  let numVariations;
+  const cardCountKeys = Array.from(cardCount.keys());
+  let combs = combinations2(cardCountKeys, 3);
+  for (let i = 0; i < combs.length; i++) {
+    const cards = combs[i];
+    const excluded = cardCountKeys.filter((x) => {
+      return !cards.includes(x);
+    });
+    for (let i2 = 0; i2 < SUIT_MASKS.length; i2++) {
+      const mask = SUIT_MASKS[i2];
+      const board = [];
+      for (const k of cards) {
+        if (deck.cardSuits[k].includes(mask)) {
+          board.push(deck.cards[k][0] & 4294905855 | mask);
+        } else {
+          break;
+        }
+      }
+      if (board.length === 3) {
+        const aPossible = deck.cardSuits[excluded[0]].includes(mask);
+        const bPossible = deck.cardSuits[excluded[1]].includes(mask);
+        if (aPossible && bPossible) {
+          numVariations = (deck.cards[excluded[0]].length - 1) * (deck.cards[excluded[1]].length - 1);
+        } else if (aPossible) {
+          numVariations = (deck.cards[excluded[0]].length - 1) * deck.cards[excluded[1]].length;
+        } else if (bPossible) {
+          numVariations = deck.cards[excluded[0]].length * (deck.cards[excluded[1]].length - 1);
+        } else {
+          numVariations = deck.cards[excluded[0]].length * deck.cards[excluded[1]].length;
+        }
+        colorings.push({
+          board,
+          numVariations,
+          color: mask,
+          num: 3
+        });
+      }
+    }
+  }
+  combs = combinations2(cardCountKeys, 4);
+  for (let i = 0; i < combs.length; i++) {
+    const cards = combs[i];
+    const excluded = cardCountKeys.filter((x) => {
+      return !cards.includes(x);
+    });
+    for (let i2 = 0; i2 < SUIT_MASKS.length; i2++) {
+      const mask = SUIT_MASKS[i2];
+      const board = [];
+      for (const k of cards) {
+        if (deck.cardSuits[k].includes(mask)) {
+          board.push(deck.cards[k][0] & 4294905855 | mask);
+        } else {
+          break;
+        }
+      }
+      if (board.length === 4) {
+        const excludedPossible = deck.cardSuits[excluded[0]].includes(mask);
+        if (excludedPossible) {
+          numVariations = deck.cards[excluded[0]].length - 1;
+        } else {
+          numVariations = deck.cards[excluded[0]].length;
+        }
+        colorings.push({
+          board,
+          numVariations,
+          color: mask,
+          num: 4
+        });
+      }
+    }
+  }
+  for (let i = 0; i < SUIT_MASKS.length; i++) {
+    const mask = SUIT_MASKS[i];
+    const board = [];
+    for (const k of cardCount.keys()) {
+      if (deck.cardSuits[k].includes(mask)) {
+        board.push(deck.cards[k][0] & 4294905855 | mask);
+      } else {
+        break;
+      }
+    }
+    if (board.length === 5) {
+      colorings.push({
+        board,
+        numVariations: 1,
+        color: mask,
+        num: 5
+      });
+    }
+  }
+  return colorings;
+};
+var suitMatch = (card, suit) => {
+  return (card & 61440) === suit;
+};
+var evalHandFlushFast = (hand, board, rainbowScore, color, numFlush) => {
+  if (numFlush === 3) {
+    if (suitMatch(hand[0], color) && suitMatch(hand[1], color)) {
+      return Math.min(rainbowScore, evaluateFlush(hand, board));
+    } else {
+      return rainbowScore;
+    }
+  } else if (numFlush === 4) {
+    const h0Match = suitMatch(hand[0], color);
+    const h1Match = suitMatch(hand[1], color);
+    if (h0Match && h1Match) {
+      return Math.min(rainbowScore, evaluateFlush(hand, board));
+    } else if (h0Match) {
+      return Math.min(rainbowScore, evaluateFlush([hand[0]], board));
+    } else if (h1Match) {
+      return Math.min(rainbowScore, evaluateFlush([hand[1]], board));
+    } else {
+      return rainbowScore;
+    }
+  } else if (numFlush === 5) {
+    const h0Match = suitMatch(hand[0], color);
+    const h1Match = suitMatch(hand[1], color);
+    if (h0Match && h1Match) {
+      return Math.min(rainbowScore, evaluateFlush(hand, board));
+    } else if (h0Match) {
+      return Math.min(rainbowScore, evaluateFlush([hand[0]], board));
+    } else if (h1Match) {
+      return Math.min(rainbowScore, evaluateFlush([hand[1]], board));
+    } else {
+      return Math.min(rainbowScore, evaluateFlush([], board));
+    }
+  }
+  throw "Unexpected number of flushes";
+};
+var fastHandHand = (hands) => {
+  const wins = new Array(hands.length).fill(0);
+  const ties = new Array(hands.length).fill(0);
+  let n = 0;
+  const exclusions = /* @__PURE__ */ new Set();
+  for (const hand of hands) {
+    exclusions.add(hand[0]);
+    exclusions.add(hand[1]);
+  }
+  const deck = getBinedDeck(exclusions);
+  const indices = [0, 0, 0, 0, 0];
+  while (true) {
+    const cardCount = countCards(indices);
+    let boardPossible = true;
+    for (const [k, v] of cardCount) {
+      if (v > deck.cards[k].length) {
+        boardPossible = false;
+        break;
+      }
+    }
+    if (boardPossible) {
+      const numColorings = calcNumColorings(cardCount, deck);
+      const board = [];
+      for (let i = 0; i < 5; i++) {
+        board.push(deck.cards[indices[i]][0]);
+      }
+      const rainbowScore = [];
+      for (let i = 0; i < hands.length; i++) {
+        rainbowScore.push(evaluateRainbow(hands[i], board));
+      }
+      let m = 0;
+      const colorings = flushColorings(cardCount, deck);
+      for (let i = 0; i < colorings.length; i++) {
+        const coloring = colorings[i];
+        const numVariations = coloring.numVariations;
+        if (numVariations === 0) {
+          continue;
+        }
+        const flushScore = [];
+        for (let j = 0; j < hands.length; j++) {
+          flushScore.push(
+            evalHandFlushFast(
+              hands[j],
+              coloring.board,
+              rainbowScore[j],
+              coloring.color,
+              coloring.num
+            )
+          );
+        }
+        const winners2 = findWinners(flushScore);
+        if (winners2.length > 1) {
+          for (let j = 0; j < winners2.length; j++) {
+            ties[winners2[j]] += numVariations;
+          }
+        } else {
+          wins[winners2[0]] += numVariations;
+        }
+        m += numVariations;
+      }
+      const winners = findWinners(rainbowScore);
+      if (winners.length > 1) {
+        for (let i = 0; i < winners.length; i++) {
+          ties[winners[i]] += numColorings - m;
+        }
+      } else {
+        wins[winners[0]] += numColorings - m;
+      }
+      n += numColorings;
+    }
+    for (let i = 0; i < 5; i++) {
+      indices[i] += 1;
+      if (indices[i] < 13) {
+        for (let j = i - 1; j >= 0; j--) {
+          indices[j] = indices[i];
+        }
+        break;
+      }
+    }
+    if (indices[4] > 12) {
+      break;
+    }
+  }
+  return [wins, ties, n];
+};
+var ALLCARDS = [
+  69634,
+  73730,
+  81922,
+  98306,
+  135427,
+  139523,
+  147715,
+  164099,
+  266757,
+  270853,
+  279045,
+  295429,
+  529159,
+  533255,
+  541447,
+  557831,
+  1053707,
+  1057803,
+  1065995,
+  1082379,
+  2102541,
+  2106637,
+  2114829,
+  2131213,
+  4199953,
+  4204049,
+  4212241,
+  4228625,
+  8394515,
+  8398611,
+  8406803,
+  8423187,
+  16783383,
+  16787479,
+  16795671,
+  16812055,
+  33560861,
+  33564957,
+  33573149,
+  33589533,
+  67115551,
+  67119647,
+  67127839,
+  67144223,
+  134224677,
+  134228773,
+  134236965,
+  134253349,
+  268442665,
+  268446761,
+  268454953,
+  268471337
+];
+var getDeck = (exclusions) => {
+  const cards = [];
+  for (const card of ALLCARDS) {
+    if (!exclusions.includes(card)) {
+      cards.push(card);
+    }
+  }
+  return cards;
+};
+var calculateHandHandEquities = (handStrings, dealtBoard) => {
+  const hands = [];
+  for (const hand of handStrings) {
+    hands.push([cardToInt(hand[0]), cardToInt(hand[1])]);
+  }
+  const board = dealtBoard.map(cardToInt);
+  if (board.length < 3) {
+    return fastHandHand(hands);
+  }
+  let n = 0;
+  const wins = new Array(hands.length).fill(0);
+  const ties = new Array(hands.length).fill(0);
+  if (board.length === 5) {
+    const results = [];
+    for (const h of hands) {
+      results.push(evaluate(board, h));
+    }
+    const winners = findWinners(results);
+    if (winners.length > 1) {
+      for (const w of winners) {
+        ties[w] += 1;
+      }
+    } else {
+      wins[winners[0]] += 1;
+    }
+    n += 1;
+  } else {
+    const deck = getDeck(board.concat(...hands));
+    const deals = combinations2(deck, 5 - board.length);
+    for (const deal of deals) {
+      const boardFull = board.concat(deal);
+      const results = [];
+      for (let j = 0; j < hands.length; j++) {
+        results.push(evaluate(boardFull, hands[j]));
+      }
+      const winners = findWinners(results);
+      if (winners.length > 1) {
+        for (const w of winners) {
+          ties[w] += 1;
+        }
+      } else {
+        wins[winners[0]] += 1;
+      }
+      n += 1;
+    }
+  }
+  return [wins, ties, n];
+};
+
+// src/texasHoldEmOdds.ts
+var texasHoldEmOdds = (hands, board) => {
+  if (hands === void 0 || hands === null) {
+    return JSON.stringify({ error: "u need to put hands" });
+  }
+  if (board === void 0) {
+    return JSON.stringify({ error: "parsing board" });
+  }
+  if (hands.length % 4) {
+    return JSON.stringify({
+      error: "check what u wrote in hands wrong length"
+    });
+  }
+  const boardLength = board?.length ? board.length : 0;
+  if (boardLength % 2 || boardLength > 10) {
+    return JSON.stringify({ error: "board wrong length" });
+  }
+  var parsedHands = [];
+  for (var i = 0; i < hands.length / 4; i++) {
+    var idx = i * 4;
+    var holeCard1 = hands.slice(idx, idx + 2);
+    var holeCard2 = hands.slice(idx + 2, idx + 4);
+    if (!holeCard1 && !holeCard2) {
+      return JSON.stringify({ error: "error parsing hands" });
+    }
+    parsedHands[i] = [holeCard1, holeCard2];
+  }
+  var parsedBoard = [];
+  if (boardLength > 0) {
+    var parsedBoard = board?.match(/.{1,2}/g);
+  }
+  const result = calculateHandHandEquities(parsedHands, parsedBoard);
+  const results = parsedHands.map((hand, index) => {
+    var combos = result[2];
+    return {
+      [hand.join("")]: {
+        win: result[0][index] / combos,
+        tie: result[1][index] / combos
+      }
+    };
+  });
+  return JSON.stringify(results, null, 2);
+};
+var texasHoldEmOdds_default = texasHoldEmOdds;

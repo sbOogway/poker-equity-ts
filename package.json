@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-cli": "./node_modules/.bin/esbuild src/main-cli.ts --bundle --platform=node --minify --outfile=dist/cli.js",
-    "build-module": "./node_modules/.bin/esbuild src/texasHoldEmOdds.ts --bundle --platform=node --minify --outfile=src/index.js"
+    "build-module": "./node_modules/.bin/esbuild src/texasHoldEmOdds.ts --bundle --platform=node --outfile=src/index.js"
   },
   "type": "module",
   "keywords": [],
